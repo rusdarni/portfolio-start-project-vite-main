@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon.tsx";
 import {Contact} from "../../components/Contact.tsx";
@@ -6,8 +5,8 @@ import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 
 export const Footer = () => {
     return (
-        <StyledFooter direction={"column"}>
-            <FlexWrapper>
+        <StyledFooter>
+            <FlexWrapper direction={"column"}>
                 <Contact/>
                 <SocialList>
                     <SocialItem>
