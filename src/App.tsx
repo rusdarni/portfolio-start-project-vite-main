@@ -6,17 +6,23 @@ import {Works} from "./layout/sections/works/Works.tsx";
 import {Testimony} from "./layout/sections/testimony/Testimony.tsx";
 import {Slogan} from "./layout/sections/slogan/Slogan.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
+import {Contacts} from "./layout/sections/contacts/Contacts.tsx";
+import {Particle} from "./components/particle/Particle.tsx";
+import {GoTopBtn} from "./components/goTopBtn/GoTopBtn.tsx";
 
 function App() {
     return (
         <div className="App">
+            <Particle/>
             <Header/>
             <Main/>
             <Works/>
             <Slogan/>
             <Skills/>
             <Testimony/>
+            <Contacts/>
             <Footer/>
+            <GoTopBtn/>
         </div>
     )
 }

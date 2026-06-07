@@ -1,61 +1,44 @@
-import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon.tsx";
-import {Contact} from "../../components/Contact.tsx";
-import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.ts";
+import {S} from "./Footer_Styles.ts"
+import React from "react";
 
-export const Footer = () => {
+const socialItemsData = [
+    {
+        iconId: "upwork",
+        viewBox: "0 0 25 25"
+    },
+    {
+        iconId: "telegram",
+        viewBox: "0 0 21 21"
+    },
+    {
+        iconId: "linkedin",
+        viewBox: "0 0 25 25"
+    },
+    {
+        iconId: "github",
+        viewBox: "0 0 25 25"
+    },
+]
+export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
-            <FlexWrapper direction={"column"}>
-                <Contact/>
-                <SocialList>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon height={"21px"} width={"21px"} viewBox={"0 0 21px 21px"} iconId={"upwork"}/>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon height={"21px"} width={"21px"} viewBox={"0 0 21px 21px"} iconId={"telegram"}/>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon height={"21px"} width={"21px"} viewBox={"0 0 21px 21px"} iconId={"linkedin"}/>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon height={"21px"} width={"21px"} viewBox={"0 0 21px 21px"} iconId={"github"}/>
-                        </SocialLink>
-                    </SocialItem>
-                </SocialList>
-                <Copyright>Created by <Strong>Zarror</Strong> | All Reserved!</Copyright>
+        <S.Footer>
+            <FlexWrapper direction={"column"} align={"center"}>
+                <S.SocialList>
+                    {socialItemsData.map((s, index) => {
+                        return (
+                            <S.SocialItem key={index}>
+                                    <S.SocialLink>
+                                        <Icon height={"25"} width={"25"} viewBox={s.viewBox} iconId={s.iconId}/>
+                                    </S.SocialLink>
+                                </S.SocialItem>
+                        )
+                    })}
+                </S.SocialList>
+                <S.Copyright>Created by <S.Strong>Zarror</S.Strong> | All Reserved!</S.Copyright>
             </FlexWrapper>
-        </StyledFooter>
+        </S.Footer>
     );
 };
 
-const StyledFooter = styled.footer`
-    background-color: #000;
-    min-height: 20vh;
-`
-
-const SocialList = styled.ul`
-    display: flex;
-`
-const SocialItem = styled.li`
-
-`
-
-const SocialLink = styled.a`
-
-`
-
-const Copyright = styled.small`
-
-`
-
-const Strong = styled.b`
-
-`

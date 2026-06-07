@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     
+    html {
+        scroll-behavior: smooth;
+    }
+    
     body {
         margin: 0;
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,6 +23,8 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         color: ${theme.colors.primaryBg};
         line-height: 1.2;
+        
+        min-width: 360px;
     }
 
     code {
@@ -28,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     
     a {
        text-decoration: none;
+        color: ${theme.colors.primaryBg};
     }
     
     ul {
@@ -37,10 +44,15 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
+        cursor: pointer;
     }
     
     section {
         padding: 100px 0;
+        
+        @media ${theme.media.mobile} {
+            padding: 80px 0;
+        }
     }
 
     section:nth-of-type(3n+1) {
@@ -54,5 +66,27 @@ export const GlobalStyle = createGlobalStyle`
     section:nth-of-type(3n+3) {
         background-color: ${theme.colors.primaryBg};
         background-image: ${theme.colors.tertiaryBg};
+    }
+    
+    h3 {
+        color: ${theme.colors.primaryBg};
+        font-weight: 700;
+        font-size: 20px;
+    }
+    
+    p {
+        font-weight: 500;
+        font-size: 15px;
+        color: ${theme.colors.fontLight}
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
     }
 `
