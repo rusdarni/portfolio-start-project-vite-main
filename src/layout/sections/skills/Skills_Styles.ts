@@ -44,7 +44,7 @@ const Skill = styled.div`
     background-image: ${theme.colors.accent};
     box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.25);
     padding: 20px;
-
+    height: 100%
 
 `
 
