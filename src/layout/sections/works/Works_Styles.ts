@@ -9,7 +9,7 @@ const Works = styled.section`
     position: relative;
     ${FlexWrapper} {
         gap: 30px;
-        @media (max-width: 859px) {
+        @media (max-width: 860px) {
             justify-content: center;
         }
     }
