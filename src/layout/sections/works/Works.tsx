@@ -87,7 +87,7 @@ export const Works: React.FC = () => {
                     <AnimatePresence>
                         {filteredWorks.map((w) => {
                             return (
-                                <motion.div style={{width: "400px", flexGrow: 1}}
+                                <motion.div style={{width: "400px", flexGrow: 1, maxWidth: "540px"}}
                                     layout
                                     initial={{opacity: 0}}
                                     animate={{opacity: 1}}
