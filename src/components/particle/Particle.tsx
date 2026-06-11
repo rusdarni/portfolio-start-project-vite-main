@@ -67,7 +67,7 @@ export const Particle = () => {
                             "mode": "bubble"
                         },
                         "onClick": {
-                            "enable": true,
+                            "enable": false,
                             "mode": "repulse"
                         }
                     },
@@ -105,7 +105,7 @@ export const Particle = () => {
 
 return (
     <ParticlesProvider init={particlesInit}>
-        <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options}/>
+        <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options} className="particles-background"/>
     </ParticlesProvider>
 );
 }

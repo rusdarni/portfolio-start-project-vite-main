@@ -36,6 +36,7 @@ const Photo = styled.img`
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
     object-fit: cover;
     align-self: stretch;
+    display: block;
     
     @media ${theme.media.mobile} {
         width: 314px;
@@ -52,7 +53,11 @@ const PhotoWrapper = styled.div`
         display: inline-block;
         height: 300px;
         width: 300px;
+        background-color: ${theme.colors.primaryBg};
         background-image: url(${RectangleMain});
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         position: absolute;
         top: 37px;
         left: 216px;
@@ -76,8 +81,7 @@ const MainTitle = styled.h1`
     ${font({weight: 700, color: theme.colors.quaternaryBg, letterSpacing: "0.01em", Fmax: 50, Fmin: 36})}
     text-align: center;
     padding: 0 56px 30px 56px;
-    
-    
+
 `
 
 const Name = styled.span`

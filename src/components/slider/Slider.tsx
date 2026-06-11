@@ -53,6 +53,7 @@ export const Slider = () => (
                         src={dotsImages[activeIndex]}
                         alt={`customer ${activeIndex + 1}`}
                         isActive={isActive}
+                        loading="lazy"
                     />
                 )}
             />

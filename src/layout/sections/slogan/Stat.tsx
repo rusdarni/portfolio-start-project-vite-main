@@ -7,7 +7,9 @@ type StatPropsType = {
 export const Stat = (props: StatPropsType) => {
     return (
         <S.Stat>
-            <S.StatNumber>{props.number}</S.StatNumber>
+            <S.StatsContainer>
+                <S.StatNumber>{props.number}</S.StatNumber>
+            </S.StatsContainer>
             <S.StatSpan>{props.text}</S.StatSpan>
         </S.Stat>
     );

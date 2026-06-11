@@ -38,9 +38,8 @@ export const Menu: React.FC<MenuProps> = ({ onClose }) => {
                         <S.NavLink
                             activeClass="active"
                             to={item.href}
-                            smooth={false}
-                            spy={true}
-                            duration={300}
+                            smooth={true}
+                            duration={1200}
                             offset={-90}
                             onClick={onClose}
                         >

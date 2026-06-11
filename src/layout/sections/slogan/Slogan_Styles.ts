@@ -31,9 +31,9 @@ const Stats = styled.div`
 
     gap: 15px;
 
-    @media ${theme.media.mobile} {
+    @media ${theme.media.tablet} {
         & > * {
-            max-width: max-content;
+            max-width: 100%;
         }
         & > :nth-child(2) {
             order: -1;
@@ -67,10 +67,24 @@ const Description = styled.p`
 const Stat = styled.div`
     display: flex;
     gap: 10px;
+    @media ${theme.media.tablet} {
+        gap: 15px;
+    }
     
 `
 
-const StatNumber = styled.div`
+const StatsContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media ${theme.media.tablet} {
+        min-width: 114px;
+        justify-content: flex-end;
+    }
+`
+
+
+const StatNumber = styled.span`
     ${font({weight: 700, lineHeight: 1.8, letterSpacing: "0.01em", Fmax: 50, Fmin: 32})};
 
     border-radius: 30px;
@@ -80,11 +94,10 @@ const StatNumber = styled.div`
     box-shadow: 0 10px 4px 0 rgba(0, 0, 0, 0.25);
     background: ${theme.colors.accent};
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    
+    @media ${theme.media.tablet} {
+        font-size: 32px;
+    }
 `
 
 const StatSpan = styled.span`
@@ -182,6 +195,7 @@ export const S = {
     SloganTitle,
     Description,
     Stat,
+    StatsContainer,
     StatNumber,
     StatSpan,
     Profile,

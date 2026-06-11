@@ -5,6 +5,7 @@ import React from "react";
 import {S} from "./Main_Styles.ts";
 import Tilt from 'react-parallax-tilt'
 
+
 export const Main: React.FC = () => {
     return (
         <S.Main id={"home"}>
@@ -20,7 +21,7 @@ export const Main: React.FC = () => {
                                 <S.StatYears>4 years</S.StatYears>
                         </S.StatItem>
                             <S.PhotoWrapper>
-                                <S.Photo src={photo} alt=""/>
+                                <S.Photo src={photo} alt="Homa" fetchPriority="high"/>
                             </S.PhotoWrapper>
                         <S.StatItem as={Tilt}>
                             <S.StatTitle>Modern Web</S.StatTitle>

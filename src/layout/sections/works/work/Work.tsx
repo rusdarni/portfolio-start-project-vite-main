@@ -13,7 +13,7 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
     return (
         <S.Work>
             <S.ImageWrapper>
-                <S.Image src={props.src} alt=""/>
+                <S.Image src={props.src} loading="lazy" alt=""/>
                 <Button>View Project</Button>
             </S.ImageWrapper>
             <S.Description>
